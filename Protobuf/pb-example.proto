@@ -4,6 +4,8 @@ syntax = "proto3";
 // very basic protobuf protocol to illustrate communication
 // between a client and a server supporting two commands:
 //  echo, and remote command execution
+//
+// By G. Noubir
 
 message Request     // Request message
 {
