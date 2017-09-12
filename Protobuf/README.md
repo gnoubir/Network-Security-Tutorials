@@ -1,4 +1,4 @@
-# Python Crypto Libraries Tutorial
+# Google Protocl Buffers Tutorial
 
 
 Tutorial on how to use Google Protocol Buffers in Python for
@@ -14,4 +14,18 @@ Tutorial on how to use Google Protocol Buffers in Python for
  * Python 2.7
  * [Google Protocol Buffers](https://developers.google.com/protocol-buffers/docs/tutorials)
 
+## Typical use
+
+```
+ $protoc --python_out=. pb-example.proto
+```
+
+ * In one terminal window run:
+```
+ $ ./socket-example-tcp-srv.py 
+```
+ * In another window run:
+```
+ $ ./socket-example-tcp-clt.py 
+```
 
