@@ -6,6 +6,8 @@
 #
 # This is the server side
 
+__author__      = "Guevara Noubir"
+
 import socket
 import time
 import sys

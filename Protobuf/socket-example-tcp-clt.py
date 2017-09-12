@@ -6,6 +6,8 @@
 #
 # This is the client side
 
+__author__      = "Guevara Noubir"
+
 import socket
 import time
 import pb_example_pb2 	# import the module created by protobuf
