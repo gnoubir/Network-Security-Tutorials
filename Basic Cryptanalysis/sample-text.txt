@@ -1,0 +1,29 @@
+Executive Summary
+
+Throughout history, people have sought after ways to communicate in secret. This lead to the advent of ciphers to encode plaintext to ciphertext which can then, be reversed, and decoded to plaintext again. Some classical ciphers include: Caesar and Vigenere ciphers which provided secrecy for a while but eventually weaknesses were found and exploited. One weakness, which this paper will explore in detail, is exposed through the use of statistical frequency analysis. It turns out that, given a sample of english text, a constant letter frequency distribution forms. This is called the english fingerprint. It also turns out that this same fingerprint comes out in many ciphertexts allowing the ciphers to be decrypted without the correct key. In the search for perfect secrecy, this eventually lead to more and more sophisticated ciphers, such as modern day DES, AES and RSA. The use of statistics, particularly frequency analysis and distributions can be used to circumvent classical ciphers as well as modern day ciphers.
+
+Introduction
+
+In cryptanalysis, frequency analysis is the study of the frequency of letters or groups of letters in a ciphertext. The method is used as an aid to breaking classical ciphers.
+
+Frequency analysis is based on the fact that, in any given stretch of written language, certain letters and combinations of letters occur with varying frequencies. Moreover, there is a characteristic distribution of letters that is roughly the same for almost all samples of that language. For instance, given a section of English language, E, T, A and O are the most common, while Z, Q and X are rare. Likewise, TH, ER, ON, and AN are the most common pairs of letters, and SS, EE, TT, and FF are the most common repeats. The nonsense phrase “ETAOIN SHRDLU” represents the 12 most frequent letters in typical English language text.
+
+In some ciphers, such properties of the natural language plaintext are preserved in the ciphertext, and these patterns have the potential to be exploited. [4]
+
+This paper hopes to demonstrate that though statistical frequency analysis that is possible to perform cipher attacks on classic encryption ciphers (such as substitution), and even possibly modern ciphers like DES.
+
+This paper employs the use of many tools to explore the vulnerabilities of the various ciphers introduced:
+
+Matlab scripts are used to generate frequency distributions (histograms)
+Cipher implementations are written in the Ruby language
+Various techniques of probability and combinatorics are used to analyze the ciphers
+The project is intended to take approximately 2 weeks of work. I will first have to research and learn about cryptography basics, especially the classic ciphers and if time/complexity permits I will explore modern and more complicated ciphers and their weaknesses. I must also allocate time to implement the various ciphers in Ruby language to run analysis and experiments. Time also must be taken to write matlab scripts and brush up on probability theory.
+
+Background Research/History
+
+The first well known cipher, a substitution cipher, was used by Julius Caesar around 58 BC. It is now referred to as the Caesar cipher. Caesar shifted each letter in his military commands in order to made them appear meaningless should the enemy intercept it.
+
+Imagine Alice and Bob decide to communicate using the Caesar cipher. First, they would need to agree in advance on a shift to use, say 3, so to encrypt her message Alice will need to apply a shift of 3 to each letter in her original message, so A becomes D, B becomes E, C becomes F, and so on. This unreadable or encrypted message, is then sent to Bob openly. Then Bob simply subtracts the shift of 3 from each letter in order to read the original message. [1]
+
+Incredibly, this basic cipher was used by military leaders for hundreds of years after Caesar. However, a lock is only as strong as its weakest point, a lockbreaker may look for mechanical flaws or failing that extract information in order to narrow down the correct combination. The process of lock breaking and code breaking are very similar. The weakness of the Caesar cipher was published 800 years later by an Arab mathematician named Al-Kindi. He broke the Caesar cipher by using a clue based on an important property of the language the message was written in. If you scan text from any book and count the frequency of each letter, you’ll find a fairly consistent pattern. For example, these are the letter frequencies of English: “ (Khan Academy)
+

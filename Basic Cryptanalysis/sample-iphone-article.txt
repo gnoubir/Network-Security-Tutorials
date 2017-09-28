@@ -1,0 +1,72 @@
+What does one say about a new iPhone? At this point, a decade after the first one sent the earth spinning in directions both magical and ghastly, it can be difficult to summon any fresh wonder when appraising the familiar little slab of digital horror and delight.
+
+The problem is especially acute for the two traditional iPhones hitting the market this year, the iPhone 8 and the larger 8 Plus, which are priced at $699 and up and will begin shipping this Friday.
+
+The 8s look almost identical to the iPhones 7, 6S and 6, a model first introduced back when Donald Trump was still hosting a reality TV show. To make matters worse, both are overshadowed by the $1,000 all-screen iPhone X, which Apple considers the foundation for the next iteration of the iPhone. That model ships in November, and reviewers have not yet had a chance to use it.
+
+So here’s my conclusion, after nearly a week testing the 8 and 8 Plus: The 8s feel like a swan song — or, to put it another way, they represent Apple’s platonic ideal of that first iPhone, an ultimate refinement before eternal retirement.
+
+Continue reading the main story
+RELATED COVERAGE
+
+
+TECH FIX
+Dear iPhone: Here’s Why We’re Still Together After 10 Years AUG. 23, 2017
+
+Apple Unveils iPhone X and 8 Models as It Upgrades TV Set-Top Box SEPT. 12, 2017
+
+TECH FIX
+IPhone 7 Review: Though Not Perfect, New iPhones Keep Apple’s Promises SEPT. 13, 2016
+
+State of the Art
+A column from Farhad Manjoo that examines how technology is changing business and society.
+It Distracted Us. It Gave Us Uber. It Made Selfies a Thing.
+SEP 11
+Seriously, Equifax? This Is a Breach No One Should Get Away With
+SEP 8
+Silicon Valley’s Politics: Liberal, With One Big Exception
+SEP 6
+Uber’s C.E.O. Choice Faces a Question of Ambitions
+AUG 28
+So Trump Makes Spelling Errors. In the Twitter Age, Whoo Doesn’t?
+AUG 27
+See More »
+
+Unsurprisingly, both the iPhone 8 and 8 Plus are very good phones. Most of Apple’s improvements over the iPhone 7 and 7 Plus are minor, but if you have an older model, either of the 8s will feel like a solid upgrade. And if you are considering upgrading from an Android phone, there’s one area where the new iPhones still rank head and shoulders above their competition — the processor, the engine that runs the entire device, where Apple is so far ahead that it almost feels unfair.
+
+Photo
+
+The iPhone 8 Plus has a depth sensor that allows it to alter the background of a portrait photograph, mimicking the effects of a high-end camera. At left, with the “studio” preset; right, with the “stage mono” preset.
+But let’s start with the basics.
+
+• The iPhone’s overall design is very slightly improved in the 8. The new models have a glass back, which you would think would make them more delicate but which actually adds a slight grippiness, making them less prone to catastrophe. (I’d still use a case for the 8 Plus, which I find ungainly to hold; the 8, though, shines in its caseless glory.)
+
+The glass back allows for the iPhone 8’s handiest new feature, wireless charging. This works just as it does on the many other phones that have long sported this trick: Set the phone down on a charging pad and it just starts charging, even through most cases. Apple said it would release its own charging mat next year; for now, you can use one of the many third-party mats that run the Qi wireless standard. (Over all, battery life on the 8 was comparable to that of the 7 — it lasted all day with light use, about half a day with heavy use, and always not long enough.)
+
+• The display on the 8 and 8 Plus is better than on the 7, but only very slightly. In particular, the screen uses a technology Apple calls True Tone, which automatically adjusts the display’s white balance to match the lighting in your surroundings. This adds a subtle vibrancy to everything you see — though honestly the only time I was able to appreciate it was when I compared it side by side with the iPhone 7.
+
+In other ways, the display is where the iPhone 8 and 8 Plus fall furthest short of their rivals. The 8s use a technology called LCD, while Apple’s rivals in the high-end phone market, including Samsung, use a newer screen technology called OLED. I won’t get into the differences here except to say OLEDs are noticeably superior — they produce more vibrant colors and deeper contrast ratios. Even Apple seems to agree, given that OLED is the basis for the display in the iPhone X.
+
+• The cameras in the 8s are very good, which is always true of cameras in the iPhone. My kid had a birthday party this weekend, and just before leaving for the venue, I decided to take a risk — I left my fancy interchangeable-lens “mirrorless” camera at home, and instead took just the 8 Plus.
+
+It would be too much to say that the phone produced images comparable to those I could get on my dedicated camera. In some indoor, low-light shots, Apple’s noise-reduction algorithm left an annoying watercolorlike ripple on my shots (a problem that has plagued previous iPhones, too).
+
+How Do You Use Tech?
+Advice and tips on the technology changing how you live.
+
+Sign Up
+SEE SAMPLE PRIVACY POLICY OPT OUT OR CONTACT US ANYTIME
+But that was the exception. Most images were astounding, and given the iPhone 8’s advantages in size, convenience and usability, I predict that my camera will be spending a lot more time in the drawer. In particular, I fell hard for the 8 Plus’s “Portrait Lighting” feature, which uses data from a depth sensor to mimic the blurred-background “bokeh” effect you get when taking portrait photos with expensive cameras. That feature made its debut last year on the iPhone 7 Plus, but in the 8 Plus, it’s been further refined to let you adjust the lighting of each shot, making for breathtaking portraits that you’ll be surprised came from a mere phone.
+
+• But the best thing about the 8 and 8 Plus is what’s most hidden: It’s the processor that powers everything else. The first thing I usually do when I get a new iPhone is run a benchmark app to get a sense of the kind of power I’m dealing with. (Yeah, I’m real fun.)
+
+For the last few years, Apple’s phones have been producing benchmark scores so high you wonder if they’re powered by some kind of black magic. For instance, on Geekbench 4, one of the more popular benchmark apps, the iPhone 8 gets a single-core processor score of around 4,200. That makes it about 25 percent faster than the iPhone 7 and about 80 percent faster than the iPhone 6S.
+
+The fastest Android phones, though, are almost painfully behind. With a Geekbench score of around 1,900, Samsung’s flagship Galaxy S8 is not just half the speed of the iPhone 8, but it’s actually slower than last year’s iPhone 7, and even slower than the iPhone 6S, released in 2015. In fact, Apple’s phones are now so powerful that the closest rivals aren’t phones but computers — for instance, the processor in the iPhone gets benchmarking scores comparable to the Intel chips found in some of Apple’s latest MacBook Pro laptops.
+
+
+35
+COMMENTS
+I spoke to several processor analysts about why Apple is so far ahead on processing power. They explained that Apple can produce these gains because it designs its own processors, while its competitors rely on chips created by third parties. And performance matters. Everything you do on a phone is improved by better chips: The interface is more responsive, advanced graphical features like augmented reality (in which digital scenes are interposed on the real world) work more fluidly, and they allow for groundbreaking new features, like the face-detection system Apple built into the iPhone X.
+
+And while experts said Apple’s lead might slip over time, for now, its advantage remains enormous enough to make the iPhone a must for people who think of their phones as their most important computing device — in other words, you and me and everyone we know.
