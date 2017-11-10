@@ -3,7 +3,7 @@
 You first need to generate the python code from proto definition file of google protobuf:
 
 ```
- $protoc --python_out=. messaging-app.proto.proto
+ $protoc --python_out=. messaging-app.proto
  ```
  
  Run the server using the following command (note that you can specify the port see --help output):
