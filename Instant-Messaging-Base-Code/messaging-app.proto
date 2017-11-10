@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+// Note that currently, we are only using the User message
+//  and only name field
+
+message User {
+    string name = 1; 
+    string ip_address = 2;
+    int32    port = 3;
+}
+
+// but we one could add a variety of other messages -- note that some of them won't make 
+//  sense in the context of your project and are only put for illustration purpose.
+
+message ListRequest {
+    bool detailed = 1;
+}
+
+message ListResponse {
+    repeated User user = 1;
+    bool detailed = 2;
+}
+
+message UserInfoRequest {
+    int32 request_id = 1;
+    User user = 2;
+}
+
+message UserInfoResponse {
+    int32 request_id = 1;
+    User user = 2;
+}
+
+message BasicMsg {
+    string msg = 1;
+}
+
