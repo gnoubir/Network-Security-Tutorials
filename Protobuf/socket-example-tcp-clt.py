@@ -33,22 +33,22 @@ for reqno in range(100):	# send 100 requests
     rqst.seqn = reqno		# set sequence number
 
 							# get request type from user
-    rcmd = raw_input('Request Type (1: ECHO, 2: RCMD): ')
+    rcmd = input('Request Type (1: ECHO, 2: RCMD): ')
 
     if rcmd == '1':			# will generate an ECHO request
         rqst.type = pb_example_pb2.Request.ECHO
 
         # payload is an arbitrary string for ECHO
-        rqst.payload = raw_input('Your text to be echoed: ')
+        rqst.payload = input('Your text to be echoed: ')
 
     elif rcmd == '2':		# will generate a request to execure a command on server
         rqst.type = pb_example_pb2.Request.RCMD
 
         # payload is a command to be executed on server
-        rqst.payload = raw_input('Command to execute on server: ')        
+        rqst.payload = input('Command to execute on server: ')        
 
     else:
-        print "Unknown command"
+        print("Unknown command")
         continue
 
 
@@ -63,7 +63,7 @@ for reqno in range(100):	# send 100 requests
     rply.ParseFromString(data)
 
     # print fields of response
-    print "received data... ", rply.version, rply.seqn, rply.payload
+    print("received data... ", rply.version, rply.seqn, rply.payload)
 
 sock.close() # close socket
 
