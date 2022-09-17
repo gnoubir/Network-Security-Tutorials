@@ -44,19 +44,19 @@ while 1:				# process one request at a time
     print(rqst.version, rqst.seqn)	# print version and sequence number
 
     if rqst.version != 7:		# only accept version 7
-    	continue
+        continue
 
     rply.version = rqst.version	# use same version number for reply
 
     rply.seqn = rqst.seqn       # use same version number for reply
 
     if (rqst.type == pb_example_pb2.Request.ECHO): # echo request
-    	rply.payload = rqst.payload                # just copy payload
+        rply.payload = rqst.payload                # just copy payload
 
     if (rqst.type == pb_example_pb2.Request.RCMD):  # remote command request
-    	print('Executing command: ', rqst.payload)
+        print('Executing command: ', rqst.payload)
                                                     # execute command and get stdout
-    	rply.payload = subprocess.check_output(rqst.payload, shell='True')
+        rply.payload = subprocess.check_output(rqst.payload, shell='True')
 
     conn.send(rply.SerializeToString())  # serialize response into string and send
     
