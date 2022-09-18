@@ -1,13 +1,14 @@
 #!/usr/bin/python
 #
 #
-__author__      = "Guevara Noubir"
+__author__ = "Guevara Noubir, Brandon Sneider"
 
-import collections
 import argparse
+import collections
 import string
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 
 parser = argparse.ArgumentParser(description='Process a file.')
 
