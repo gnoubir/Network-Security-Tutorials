@@ -74,7 +74,7 @@ user.name = username
 
 # Send REGISTER message to server
 # Use the send_multipart API of ZMQ -- again to illustrate some of the capabilities of ZMQ
-socket.send_multipart([b"REGISTER", username, user.SerializeToString()])
+socket.send_multipart([b"REGISTER", username.encode(), user.SerializeToString()])
 
 # An alternative would have been to send the username directly
 # socket.send_multipart([b"REGISTER", username])

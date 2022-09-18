@@ -23,8 +23,6 @@ __author__ = "Guevara Noubir, Brandon Sneider"
 
 import argparse
 import base64
-import sys
-import time
 
 import zmq
 
@@ -33,7 +31,7 @@ import messaging_app_pb2
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-    "-p",
+    "-sp",
     "--server-port",
     type=int,
     default=5569,
@@ -58,7 +56,7 @@ while True:
 
     message = socket.recv_multipart()
 
-    # Remeber that when a ROUTER receives a message the first part is an identifier
+    # Remember that when a ROUTER receives a message the first part is an identifier
     #  to keep track of who sent the message and be able to send back messages
     ident = message[0]
 
