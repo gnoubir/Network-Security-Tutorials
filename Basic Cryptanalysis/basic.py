@@ -40,9 +40,9 @@ for l in string.ascii_lowercase:
 
 for l in string.ascii_lowercase:
 	stats1 += [float(letters1[l])/count1] 
-	print l, ": ", float(letters1[l])/count1 
+	print(l, ": ", float(letters1[l])/count1) 
 
-print "\n ----------------- \n"
+print("\n ----------------- \n")
 
 with open(args.file2,'r') as f:
     for line in f:
@@ -58,17 +58,17 @@ for l in string.ascii_lowercase:
 
 for l in string.ascii_lowercase:
 	stats2 += [float(letters2[l])/count2] 
-	print l, ": ", float(letters2[l])/count2 
+	print(l, ": ", float(letters2[l])/count2) 
 
-print "\n ----------------- \n"
+print("\n ----------------- \n")
 
 for l in string.ascii_lowercase:
-	print l, ": ", float(letters1[l])/count1 - float(letters2[l])/count2 
+	print(l, ": ", float(letters1[l])/count1 - float(letters2[l])/count2) 
 
-print "\n ----------------- \n"
+print("\n ----------------- \n")
 
-print letters1.keys()
-print letters1.values()
+print(list(letters1.keys()))
+print(list(letters1.values()))
 
 pos = np.arange(26)
 width = 1.0     # gives histogram aspect to the bar diagram
@@ -78,10 +78,10 @@ ax.set_xticks(pos + (width / 2))
 
 ax.set_xticklabels(string.ascii_lowercase)
 
-print "*****"
-print stats1
+print("*****")
+print(stats1)
 
-plt.bar(range(len(stats1)), stats1, width/2, color='g', alpha=0.5, align='edge')
-plt.bar(range(len(list(string.ascii_lowercase))), english_alphabet_stats, -width/2, color='r', alpha=0.5, align='edge')
+plt.bar(list(range(len(stats1))), stats1, width/2, color='g', alpha=0.5, align='edge')
+plt.bar(list(range(len(list(string.ascii_lowercase)))), english_alphabet_stats, -width/2, color='r', alpha=0.5, align='edge')
 #                            
 plt.show()

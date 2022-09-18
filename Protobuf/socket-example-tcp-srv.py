@@ -32,7 +32,7 @@ sock.listen(1)			# listen with one pending connection
 
 conn, addr = sock.accept()	# accept connection from client
 
-print('Connection address:', addr)
+print(('Connection address:', addr))
 
 while 1:				# process one request at a time
     data = conn.recv(BUFFER_SIZE)
@@ -41,7 +41,7 @@ while 1:				# process one request at a time
     print("received data...")
 
     rqst.ParseFromString(data)	# parse message
-    print(rqst.version, rqst.seqn)	# print version and sequence number
+    print((rqst.version, rqst.seqn))	# print version and sequence number
 
     if rqst.version != 7:		# only accept version 7
         continue
@@ -54,7 +54,7 @@ while 1:				# process one request at a time
         rply.payload = rqst.payload                # just copy payload
 
     if (rqst.type == pb_example_pb2.Request.RCMD):  # remote command request
-        print('Executing command: ', rqst.payload)
+        print(('Executing command: ', rqst.payload))
                                                     # execute command and get stdout
         rply.payload = subprocess.check_output(rqst.payload, shell='True')
 

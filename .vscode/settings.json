@@ -1,0 +1,10 @@
+{
+    "python.defaultInterpreterPath": "./venv/bin/python3",
+    "python.formatting.provider": "black",
+    "cSpell.words": [
+        "Noubir",
+        "POLLIN",
+        "protobuf",
+        "Sneider"
+    ]
+}

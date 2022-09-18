@@ -59,7 +59,7 @@ while(True):
     #  to keep track of who sent the message and be able to send back messages
     ident = message[0]
 
-    print("Received [%s]" % (message[1]))
+    print(("Received [%s]" % (message[1])))
 
     if len(message) == 2:
     	if message[1]== 'LIST':
@@ -69,7 +69,7 @@ while(True):
     			socket.send_multipart([ident, b'ERR', b'You need to register first.'])
     		else:
 
-	    		print("List request from user %s" %(logged_ident[ident]))
+	    		print(("List request from user %s" %(logged_ident[ident])))
     			socket.send_multipart([ident, b'LIST', base64.b64encode(str(logged_users))])
 
     if len(message) == 4:
@@ -78,14 +78,14 @@ while(True):
     		logged_ident[ident] = message[2]
     		user = messaging_app_pb2.User()
     		user.ParseFromString(message[3])
-    		print ("Registering %s" % (user.name))
+    		print(("Registering %s" % (user.name)))
     		socket.send_multipart([ident, b"REGISTER", b'Welcome %s!' %(str(user.name))])
 
     if len(message) == 4:
     	if message[1] == 'SEND':
     		# check if destination is registered, retrieve address, and forward
     		if message[2] in logged_users:
-    			print "sending message to %s" %(message[2])
+    			print("sending message to %s" %(message[2]))
 
                 # Note that message from ROUTER is prepended by destination ident 
     			socket.send_multipart([logged_users[message[2]], b'MSG', message[3]])

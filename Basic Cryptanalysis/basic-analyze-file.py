@@ -43,9 +43,9 @@ for l in string.ascii_lowercase:
 # computes and prints frequency/probability of each lowercase letter
 for l in string.ascii_lowercase:
 	stats += [float(letters[l])/count] 
-	print l, ": ", float(letters[l])/count 
+	print(l, ": ", float(letters[l])/count) 
 
-print "\n ----------------- \n"
+print("\n ----------------- \n")
 
 #print letters.keys()
 #print letters.values()
@@ -60,8 +60,8 @@ ax.set_xticks(pos )
 ax.set_xticklabels(string.ascii_lowercase)
 
 # rects1 is 
-english_bars = plt.bar(range(len(list(string.ascii_lowercase))), english_alphabet_stats, -width/3, color='r', alpha=0.5, align='edge')
-this_file_bars = plt.bar(range(len(stats)), stats, width/3, color='g', alpha=0.5, align='edge')
+english_bars = plt.bar(list(range(len(list(string.ascii_lowercase)))), english_alphabet_stats, -width/3, color='r', alpha=0.5, align='edge')
+this_file_bars = plt.bar(list(range(len(stats))), stats, width/3, color='g', alpha=0.5, align='edge')
 
 ax.legend((english_bars[0], this_file_bars[0]), ('English Stats', args.file))
 
