@@ -1,0 +1,79 @@
+
+type host.
+type G.
+type exponent.
+type key.
+
+const A_DONE, B_DONE: bitstring.
+
+fun G_to_key(G): key [data, typeConverter].
+fun G_to_bitstring(G):bitstring [data, typeConverter].
+fun bitstring_to_G(bitstring):G [data, typeConverter].
+
+(* Diffie-Hellman *)
+const g: G.
+fun exp(G, exponent): G.
+equation forall x: exponent, y: exponent; 
+    exp(exp(g, x), y) = exp(exp(g, y), x).
+
+(* Symmetric cryptography
+   One does not know whether decryption succeeds or not
+   For use with weak secrets *)
+
+fun enc(bitstring, key): bitstring.
+fun dec(bitstring, key): bitstring.
+
+free c: channel.
+free kAB, K: key [private].
+
+(* kAB is a weak secret such as derived from a password  *)
+(* The Diffie-Hellman key will remain secure even if kAB *)
+(* is weak. Note that specifying that kAB is weak is the *)
+(* as specifying a phase 1 where kAB is revealed.        *)
+(* weaksecret kAB.   *)
+
+equation forall x: bitstring, y: key; dec(enc(x,y),y) = x.
+equation forall x: bitstring, y: key; enc(dec(x,y),y) = x.
+
+query attacker(K).
+
+let hostA(kAB: key) =
+    new a: exponent;
+    new chA: bitstring;
+    let ga = exp(g, a) in (
+        out(c, (enc(G_to_bitstring(ga), kAB), chA));
+        in(c, (egb: bitstring, respB: bitstring, chB: bitstring));
+        let gb = bitstring_to_G(dec(egb, kAB)) in (
+            let K = G_to_key(exp(gb, a)) in (
+                if chA = dec(respB, K) then
+                    out(c, enc(chB, K))
+            )
+        )
+    ).
+ 
+let hostB(kAB: key) =
+    new b: exponent;
+    new chB: bitstring;
+    let gb = exp(g, b) in (
+        in(c, (ega: bitstring, chA: bitstring));
+        let ga = bitstring_to_G(dec(ega, kAB)) in (
+            let K= G_to_key(exp(ga, b)) in (
+                out(c, (enc(G_to_bitstring(gb), kAB), enc(chA, K), chB));
+                in(c, respB: bitstring);
+                if dec(respB, K) = chB then
+                    out(c, B_DONE)
+            )
+        )
+    ).
+
+process 
+    ((! hostA(kAB)) |
+     (! hostB(kAB))     | 
+
+     phase 1; out(c, kAB) 
+
+      (* Forward Secrecy is achievable even if key is weak *)
+     )
+
+
+   

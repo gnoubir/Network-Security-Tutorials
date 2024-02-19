@@ -1,0 +1,55 @@
+(* Simple Challenge Reponse Protocol *)
+
+(* Shared key encryption *)
+
+set traceDisplay = long.
+
+type skey.  (* symmetric key *)
+
+fun sencrypt(bitstring, skey): bitstring.
+reduc forall m: bitstring, k: skey; sdecrypt(sencrypt(m, k), k) = m.
+
+free c: channel.
+const HELLO, CLIENT, SERVER: bitstring.
+
+event serverAuthenticated(bitstring).
+event clientAuthenticated(bitstring).
+event ServerProved(bitstring).
+event clientProved(bitstring).
+
+query NA: bitstring; 
+    event(serverAuthenticated(NA)) ==> event(ServerProved(NA)).
+
+query NB: bitstring; 
+    event(clientAuthenticated(NB)) ==> event(clientProved(NB)).
+
+let clientA(kAB: skey) =
+    new NA: bitstring;
+    out(c, HELLO);
+    in(c, NB: bitstring);
+    let A_RESP = sencrypt((CLIENT, NB), kAB) in (
+        event clientProved(NB);
+        out(c, (A_RESP, NA));
+        in(c, B_RESP: bitstring);
+        if (SERVER, NA) = sdecrypt(B_RESP, kAB) then (
+            event serverAuthenticated(NA)
+        )
+    ).
+
+let serverB(kAB: skey) = 
+    in(c, hello: bitstring);
+    new NB: bitstring;
+    out(c, NB);
+    in(c, (A_RESP: bitstring, NA: bitstring));
+    if A_RESP = (CLIENT, sencrypt(NB, kAB)) then (
+        event clientAuthenticated(NB);
+        let B_RESP: bitstring = sencrypt(NA, kAB) in (
+            event ServerProved(NA);
+            out(c, (SERVER, B_RESP))
+        )
+    ).
+
+process
+    new kAB: skey;
+    ( (! clientA(kAB) ) | 
+      (! serverB(kAB) )   )
